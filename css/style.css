@@ -1,0 +1,547 @@
+body header .container-fluid .row .navegacion .menu .logotipo, body header .container-fluid .row .navegacion .menu .logotipo .caja, body .media, body .team .nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #c89b64; }
+  body header {
+    min-width: 257px;
+    width: 100%;
+    position: fixed !important; }
+    body header .container-fluid .row .navegacion {
+      padding-top: 0%;
+      padding-bottom: 0%;
+      background-color: rgba(78, 77, 77, 0.745) !important;
+      padding: 0% 5%; }
+      body header .container-fluid .row .navegacion .menu {
+        display: flex;
+        min-width: 145px;
+        padding: 0; }
+        body header .container-fluid .row .navegacion .menu .logotipo {
+          color: beige; }
+          body header .container-fluid .row .navegacion .menu .logotipo .logo {
+            width: 5rem;
+            height: 5rem;
+            background-color: #7f6f5f; }
+          body header .container-fluid .row .navegacion .menu .logotipo .caja {
+            flex-direction: column;
+            margin-left: 1rem; }
+            body header .container-fluid .row .navegacion .menu .logotipo .caja .titulo {
+              font-family: 'Pacifico', cursive;
+              font-size: 2rem; }
+            body header .container-fluid .row .navegacion .menu .logotipo .caja .subtitulo {
+              font-family: 'Pacifico', cursive;
+              font-size: 2rem; }
+        body header .container-fluid .row .navegacion .menu .lista {
+          display: flexbox;
+          justify-content: center;
+          background-color: rgba(0, 0, 0, 0); }
+          body header .container-fluid .row .navegacion .menu .lista .box {
+            gap: 1rem; }
+            body header .container-fluid .row .navegacion .menu .lista .box .enlace {
+              color: white;
+              font-size: 18px;
+              padding: 7px 13px;
+              border-radius: 3px;
+              text-transform: uppercase;
+              font-family: 'Istok Web', sans-serif; }
+            body header .container-fluid .row .navegacion .menu .lista .box .enlace.active, body header .container-fluid .row .navegacion .menu .lista .box .enlace:hover {
+              background: #fffad2;
+              transition: .5s;
+              color: black; }
+  body .media {
+    background-image: url(../img/imagen-fondo.jpg);
+    background-position: center;
+    min-height: 100vh;
+    min-width: 400px;
+    background-size: cover;
+    flex-direction: column;
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, 0.59);
+    text-decoration-color: beige; }
+    body .media .titular-media {
+      font-family: 'Signika Negative', sans-serif;
+      font-size: 2rem;
+      color: #d4d2d2;
+      text-align: center; }
+    body .media .parrafo-media {
+      font-family: 'Signika Negative', sans-serif;
+      font-size: 1.2rem;
+      color: #d4d2d2;
+      text-align: center; }
+  body .scroll-down {
+    display: none;
+    height: 50px;
+    width: 30px;
+    border: 2px solid white;
+    position: absolute;
+    left: 49.3%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer; }
+  body .scroll-down::before,
+  body .scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 2px solid white;
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite; }
+  body .scroll-down::before {
+    top: 30%;
+    animation-delay: 0.3s;
+    /* animation: scroll-down 1s ease-in-out infinite; */ }
+
+@keyframes scroll-down {
+  0% {
+    /* top:20%; */
+    opacity: 0; }
+  30% {
+    opacity: 1; }
+  60% {
+    opacity: 1; }
+  100% {
+    top: 90%;
+    opacity: 0; } }
+  body section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 400px; }
+    body section .detalles {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0.5rem 2rem;
+      padding-bottom: 3rem; }
+      body section .detalles .ambientacion {
+        text-decoration: underline;
+        font-family: 'Signika Negative', sans-serif;
+        font-size: 2rem;
+        text-align: center; }
+      body section .detalles .ambientacion-parrafo {
+        color: black;
+        max-width: 379px;
+        font-family: 'Signika Negative', sans-serif;
+        font-size: 1.3rem;
+        text-align: center; }
+      body section .detalles .hoteleria {
+        text-decoration: underline;
+        font-family: 'Signika Negative', sans-serif;
+        font-size: 2rem;
+        text-align: center; }
+      body section .detalles .hoteleria-parrafo {
+        color: black;
+        max-width: 379px;
+        font-family: 'Signika Negative', sans-serif;
+        font-size: 1.3rem;
+        text-align: center; }
+    body section .video {
+      display: none; }
+    body section .referencia .marca {
+      font-family: 'Signika Negative', sans-serif;
+      font-size: 1.5rem;
+      text-align: center;
+      padding-top: 2rem;
+      padding-bottom: 2rem; }
+    body section .referencia .empresas {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto auto auto auto;
+      grid-template-areas: "marca-uno marca-dos" "marca-tres marca-cuatro" "marca-cinco marca-seis" "marca-siete marca-ocho" "marca-nueve marca-diez" "marca-once marca-doce";
+      gap: 2rem;
+      margin-bottom: 4rem; }
+      body section .referencia .empresas .marca-uno {
+        grid-area: marca-uno;
+        width: 10rem;
+        height: 10rem; }
+      body section .referencia .empresas .marca-dos {
+        grid-area: marca-dos;
+        width: 10rem;
+        height: 10rem; }
+      body section .referencia .empresas .marca-tres {
+        grid-area: marca-tres;
+        width: 10rem;
+        height: 10rem; }
+      body section .referencia .empresas .marca-cuatro {
+        grid-area: marca-cuatro;
+        width: 10rem;
+        height: 10rem; }
+      body section .referencia .empresas .marca-cinco {
+        grid-area: marca-cinco;
+        width: 10rem;
+        height: 10rem; }
+      body section .referencia .empresas .marca-seis {
+        grid-area: marca-seis;
+        width: 10rem;
+        height: 10rem; }
+      body section .referencia .empresas .marca-siete {
+        grid-area: marca-siete;
+        width: 10rem;
+        height: 10rem; }
+      body section .referencia .empresas .marca-ocho {
+        grid-area: marca-ocho;
+        width: 10rem;
+        height: 10rem; }
+      body section .referencia .empresas .marca-nueve {
+        grid-area: marca-nueve;
+        width: 10rem;
+        height: 10rem; }
+      body section .referencia .empresas .marca-diez {
+        grid-area: marca-diez;
+        width: 10rem;
+        height: 10rem; }
+      body section .referencia .empresas .marca-once {
+        grid-area: marca-once;
+        width: 10rem;
+        height: 10rem; }
+      body section .referencia .empresas .marca-doce {
+        grid-area: marca-doce;
+        width: 10rem;
+        height: 10rem; }
+  body .proyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 400px;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    gap: 1rem; }
+    body .proyectos img {
+      width: 24rem;
+      height: 35rem;
+      min-height: 288px; }
+    body .proyectos p {
+      font-family: 'Signika Negative', sans-serif;
+      color: black;
+      max-width: 379px; }
+  body .fotos {
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 400px;
+    padding-bottom: 5rem; }
+    body .fotos .fotos-titulo {
+      text-transform: uppercase;
+      text-align: center;
+      color: black;
+      max-width: 607px;
+      font-family: 'Signika Negative', sans-serif; }
+    body .fotos .foto-uno, body .fotos .foto-dos, body .fotos .foto-tres, body .fotos .foto-cuatro, body .fotos .foto-cinco, body .fotos .foto-seis {
+      width: 24rem;
+      height: 31rem;
+      margin: 2rem 0; }
+  body .team .nosotros {
+    flex-direction: column;
+    padding-top: 12rem;
+    min-width: 400px;
+    padding-bottom: 5rem; }
+    body .team .nosotros .nosotros-titulo {
+      font-family: 'Signika Negative', sans-serif; }
+    body .team .nosotros .nosotros-equipo {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      body .team .nosotros .nosotros-equipo .nosotros-cami, body .team .nosotros .nosotros-equipo .nosotros-ale, body .team .nosotros .nosotros-equipo .nosotros-jaqui {
+        width: 400px;
+        height: 400px; }
+      body .team .nosotros .nosotros-equipo .titulo-cami {
+        font-family: 'Signika Negative', sans-serif;
+        color: black;
+        max-width: 380px; }
+      body .team .nosotros .nosotros-equipo .parrafo-cami {
+        font-family: 'Signika Negative', sans-serif;
+        color: black;
+        max-width: 380px;
+        padding-bottom: 7rem; }
+      body .team .nosotros .nosotros-equipo .titulo-ale {
+        font-family: 'Signika Negative', sans-serif;
+        color: black;
+        max-width: 380px; }
+      body .team .nosotros .nosotros-equipo .parrafo-ale {
+        font-family: 'Signika Negative', sans-serif;
+        color: black;
+        max-width: 380px;
+        padding-bottom: 7rem; }
+      body .team .nosotros .nosotros-equipo .titulo-jaqui {
+        font-family: 'Signika Negative', sans-serif;
+        color: black;
+        max-width: 380px; }
+      body .team .nosotros .nosotros-equipo .parrafo-jaqui {
+        font-family: 'Signika Negative', sans-serif;
+        color: black;
+        max-width: 380px;
+        padding-bottom: 7rem; }
+  body .formulario {
+    margin-bottom: 4rem; }
+    body .formulario .row .col-12 .imagen-contacto {
+      width: 100%;
+      min-width: 376px; }
+    body .formulario .row .col-12 .planilla {
+      min-width: 376px; }
+    body .formulario .row .col-12 .parrafo-contacto {
+      font-family: 'Signika Negative', sans-serif;
+      min-width: 376px;
+      color: black;
+      text-align: start; }
+  body .pie {
+    background-color: #7d6b41;
+    padding: 2rem 0;
+    min-width: 400px; }
+    body .pie .redes {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      min-width: 400px; }
+    body .pie .copyright {
+      display: flex;
+      margin-top: 2rem;
+      justify-content: center;
+      padding: 0 1rem;
+      text-align: center;
+      color: black; }
+  @media screen and (min-width: 400px) {
+    body .scroll-down {
+      display: inline; } }
+  @media screen and (min-width: 833px) {
+    body section .video {
+      display: flex; }
+    body section .detalles {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "primer-living segundo-living" "ambientacion hoteleria" "ambientacion-parrafo hoteleria-parrafo";
+      align-items: center;
+      justify-content: center;
+      column-gap: 1rem; }
+      body section .detalles .primer.living {
+        grid-area: primer-living; }
+      body section .detalles .segundo.living {
+        grid-area: segundo-living; }
+      body section .detalles .ambientacion {
+        grid-area: ambientacion;
+        text-align: center; }
+      body section .detalles .ambientacion-parrafo {
+        grid-area: ambientacion-parrafo; }
+      body section .detalles .hoteleria {
+        grid-area: hoteleria;
+        text-align: center; }
+      body section .detalles .hoteleria-parrafo {
+        grid-area: hoteleria-parrafo; }
+    body section .referencia .empresas {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "marca-uno marca-dos marca-tres" "marca-cuatro marca-cinco marca-seis" "marca-siete marca-ocho marca-nueve" "marca-diez marca-once marca-doce"; }
+    body .proyectos {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+      grid-template-areas: "titulo-proyecto titulo-proyecto" "proyecto-uno proyecto-dos" "subtitulo-uno subtitulo-dos" "parrafo-uno parrafo-dos" "proyecto-tres proyecto-cuatro" "subtitulo-tres subtitulo-cuatro" "parrafo-tres parrafo-cuatro" "proyecto-cinco proyecto-seis" "subtitulo-cinco subtitulo-seis" "parrafo-cinco parrafo-seis" "proyecto-siete proyecto-ocho" "subtitulo-siete subtitulo-ocho" "parrafo-siete parrafo-ocho" "proyecto-nueve proyecto-diez" "subtitulo-nueve subtitulo-diez" "parrafo-nueve parrafo-diez" "proyecto-once proyecto-doce" "subtitulo-once subtitulo-doce" "parrafo-once parrafo-doce" "proyecto-trece proyecto-catorce" "subtitulo-trece subtitulo-catorce" "parrafo-trece parrafo-catorce" "proyecto-quince proyecto-dieciseis" "subtitulo-quince subtitulo-dieciseis" "parrafo-quince parrafo-dieciseis" "proyecto-diecisiete proyecto-dieciocho" "subtitulo-diecisiete subtitulo-dieciocho" "parrafo-diecisiete parrafo-dieciocho";
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+      gap: 2rem;
+      padding-bottom: 5rem; }
+      body .proyectos .titulo-proyecto {
+        grid-area: titulo-proyecto; }
+      body .proyectos .proyecto-uno {
+        grid-area: proyecto-uno; }
+      body .proyectos .subtitulo-uno {
+        grid-area: subtitulo-uno; }
+      body .proyectos .parrafo-uno {
+        grid-area: parrafo-uno; }
+      body .proyectos .proyecto-dos {
+        grid-area: proyecto-dos; }
+      body .proyectos .subtitulo-dos {
+        grid-area: subtitulo-dos; }
+      body .proyectos .parrafo-dos {
+        grid-area: parrafo-dos; }
+      body .proyectos .proyecto-tres {
+        grid-area: proyecto-tres; }
+      body .proyectos .subtitulo-tres {
+        grid-area: subtitulo-tres; }
+      body .proyectos .parrafo-tres {
+        grid-area: parrafo-tres; }
+      body .proyectos .proyecto-cuatro {
+        grid-area: proyecto-cuatro; }
+      body .proyectos .subtitulo-cuatro {
+        grid-area: subtitulo-cuatro; }
+      body .proyectos .parrafo-cuatro {
+        grid-area: parrafo-cuatro; }
+      body .proyectos .proyecto-cinco {
+        grid-area: proyecto-cinco; }
+      body .proyectos .subtitulo-cinco {
+        grid-area: subtitulo-cinco; }
+      body .proyectos .parrafo-cinco {
+        grid-area: parrafo-cinco; }
+      body .proyectos .proyecto-seis {
+        grid-area: proyecto-seis; }
+      body .proyectos .subtitulo-seis {
+        grid-area: subtitulo-seis; }
+      body .proyectos .parrafo-seis {
+        grid-area: parrafo-seis; }
+      body .proyectos .proyecto-siete {
+        grid-area: proyecto-siete; }
+      body .proyectos .subtitulo-siete {
+        grid-area: subtitulo-siete; }
+      body .proyectos .parrafo-siete {
+        grid-area: parrafo-siete; }
+      body .proyectos .proyecto-ocho {
+        grid-area: proyecto-ocho; }
+      body .proyectos .subtitulo-ocho {
+        grid-area: subtitulo-ocho; }
+      body .proyectos .parrafo-ocho {
+        grid-area: parrafo-ocho; }
+      body .proyectos .proyecto-nueve {
+        grid-area: proyecto-nueve; }
+      body .proyectos .subtitulo-nueve {
+        grid-area: subtitulo-nueve; }
+      body .proyectos .parrafo-nueve {
+        grid-area: parrafo-nueve; }
+      body .proyectos .proyecto-diez {
+        grid-area: proyecto-diez; }
+      body .proyectos .subtitulo-diez {
+        grid-area: subtitulo-diez; }
+      body .proyectos .parrafo-diez {
+        grid-area: parrafo-diez; }
+      body .proyectos .proyecto-once {
+        grid-area: proyecto-once; }
+      body .proyectos .subtitulo-once {
+        grid-area: subtitulo-once; }
+      body .proyectos .parrafo-once {
+        grid-area: parrafo-once; }
+      body .proyectos .proyecto-doce {
+        grid-area: proyecto-doce; }
+      body .proyectos .subtitulo-doce {
+        grid-area: subtitulo-doce; }
+      body .proyectos .parrafo-doce {
+        grid-area: parrafo-doce; }
+      body .proyectos .proyecto-trece {
+        grid-area: proyecto-trece; }
+      body .proyectos .subtitulo-trece {
+        grid-area: subtitulo-trece; }
+      body .proyectos .parrafo-trece {
+        grid-area: parrafo-trece; }
+      body .proyectos .proyecto-catorce {
+        grid-area: proyecto-catorce; }
+      body .proyectos .subtitulo-catorce {
+        grid-area: subtitulo-catorce; }
+      body .proyectos .parrafo-catorce {
+        grid-area: parrafo-catorce; }
+      body .proyectos .proyecto-quince {
+        grid-area: proyecto-quince; }
+      body .proyectos .subtitulo-quince {
+        grid-area: subtitulo-quince; }
+      body .proyectos .parrafo-quince {
+        grid-area: parrafo-quince; }
+      body .proyectos .proyecto-dieciseis {
+        grid-area: proyecto-dieciseis; }
+      body .proyectos .subtitulo-dieciseis {
+        grid-area: subtitulo-dieciseis; }
+      body .proyectos .parrafo-dieciseis {
+        grid-area: parrafo-dieciseis; }
+      body .proyectos .proyecto-diecisiete {
+        grid-area: proyecto-diecisiete; }
+      body .proyectos .subtitulo-diecisiete {
+        grid-area: subtitulo-diecisiete; }
+      body .proyectos .parrafo-diecisiete {
+        grid-area: parrafo-diecisiete; }
+      body .proyectos .proyecto-dieciocho {
+        grid-area: proyecto-dieciocho; }
+      body .proyectos .subtitulo-dieciocho {
+        grid-area: subtitulo-dieciocho; }
+      body .proyectos .parrafo-dieciocho {
+        grid-area: parrafo-dieciocho; }
+      body .proyectos .proyectos img {
+        width: 25rem;
+        height: 37rem; }
+    body .fotos {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "fotos-titulo fotos-titulo" "foto-uno foto-dos" "foto-tres foto-cuatro" "foto-cinco foto-seis";
+      align-items: center;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+      gap: 1rem; }
+      body .fotos .fotos-titulo {
+        grid-area: fotos-titulo; }
+      body .fotos .foto-uno {
+        grid-area: foto-uno; }
+      body .fotos .foto-dos {
+        grid-area: foto-dos; }
+      body .fotos .foto-tres {
+        grid-area: foto-tres; }
+      body .fotos .foto-cuatro {
+        grid-area: foto-cuatro; }
+      body .fotos .foto-cinco {
+        grid-area: foto-cinco; }
+      body .fotos .foto-seis {
+        grid-area: foto-seis; } }
+  @media screen and (min-width: 1241px) {
+    body section .detalles {
+      column-gap: 20rem; }
+    body section .referencia .empresas {
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "marca-uno marca-dos marca-tres marca-cuatro marca-cinco marca-seis" "marca-siete marca-ocho marca-nueve marca-diez marca-once marca-doce"; }
+    body .proyectos {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+      grid-template-areas: "titulo-proyecto titulo-proyecto titulo-proyecto" "proyecto-uno proyecto-dos proyecto-tres" "subtitulo-uno subtitulo-dos subtitulo-tres" "parrafo-uno parrafo-dos parrafo-tres" "proyecto-cuatro proyecto-cinco proyecto-seis" "subtitulo-cuatro subtitulo-cinco subtitulo-seis" "parrafo-cuatro parrafo-cinco parrafo-seis" "proyecto-siete proyecto-ocho proyecto-nueve" "subtitulo-siete subtitulo-ocho subtitulo-nueve" "parrafo-siete parrafo-ocho parrafo-nueve" "proyecto-diez proyecto-once proyecto-doce" "subtitulo-diez subtitulo-once subtitulo-doce" "parrafo-diez parrafo-once parrafo-doce" "proyecto-trece proyecto-catorce proyecto-quince" "subtitulo-trece subtitulo-catorce subtitulo-quince" "parrafo-trece parrafo-catorce parrafo-quince" "proyecto-dieciseis proyecto-diecisiete proyecto-dieciocho" "subtitulo-dieciseis subtitulo-diecisiete subtitulo-dieciocho" "parrafo-dieciseis parrafo-diecisiete parrafo-dieciocho";
+      gap: 1rem;
+      padding-bottom: 5rem; }
+    body .fotos {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "fotos-titulo fotos-titulo fotos-titulo" "foto-uno foto-dos foto-tres" "foto-cuatro foto-cinco foto-seis";
+      align-items: center;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+      gap: 1rem; }
+    body .team .nosotros .nosotros-equipo {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto;
+      grid-template-areas: "nosotros-cami nosotros-ale nosotros-jaqui" "titulo-cami titulo-ale titulo-jaqui" "parrafo-cami parrafo-ale parrafo-jaqui";
+      align-items: center;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+      gap: 1rem; }
+      body .team .nosotros .nosotros-equipo .nosotros-cami {
+        grid-area: nosotros-cami; }
+      body .team .nosotros .nosotros-equipo .titulo-cami {
+        grid-area: titulo-cami; }
+      body .team .nosotros .nosotros-equipo .parrafo-cami {
+        grid-area: parrafo-cami; }
+      body .team .nosotros .nosotros-equipo .nosotros-ale {
+        grid-area: nosotros-ale; }
+      body .team .nosotros .nosotros-equipo .titulo-ale {
+        grid-area: titulo-ale; }
+      body .team .nosotros .nosotros-equipo .parrafo-ale {
+        grid-area: parrafo-ale; }
+      body .team .nosotros .nosotros-equipo .nosotros-jaqui {
+        grid-area: nosotros-jaqui; }
+      body .team .nosotros .nosotros-equipo .titulo-jaqui {
+        grid-area: titulo-jaqui; }
+      body .team .nosotros .nosotros-equipo .parrafo-jaqui {
+        grid-area: parrafo-jaqui; } }
