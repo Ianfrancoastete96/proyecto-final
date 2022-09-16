@@ -9,10 +9,34 @@
 }
 body{
 	background-color: $color-principal;
+    .btn-wsp{
+        position:fixed;
+        width:60px;
+        height:60px;
+        line-height: 63px;
+        bottom:25px;
+        right:25px;
+        background: $boton-whatsapp;
+        border-radius:50px;
+        text-align:center;
+        font-size:35px;
+        box-shadow: 0px 1px 10px $borde-whatsapp;
+        z-index:100;
+        transition: all 300ms ease;
+        .whatsapp{
+            width: 42px;
+            height: 42px;
+            margin-bottom: 1rem;
+        }
+    }
+    .btn-wsp:hover{
+        background: $boton-whatsapp-on;
+    }
     header{
         min-width: 257px;
         width: map-get($map: $standard, $key: width-standard);
         position: fixed !important;
+        z-index: 100;
         .container-fluid{
             .row{
                 .navegacion{
@@ -26,10 +50,9 @@ body{
                         padding: 0;
                         .logotipo{
                             @extend %flex;
-                            color: beige;
                             .logo{
-                                width: 5rem;
-                                height: 5rem;
+                                width: 4rem;
+                                height: 4rem;
                                 background-color: $color-logo;
                             }
                             .caja{
@@ -38,11 +61,13 @@ body{
                                 margin-left: 1rem;
                                 .titulo{
                                     font-family: 'Pacifico', cursive;
-                                    font-size: 2rem;
+                                    font-size: 1.5rem;
+                                    color: $color-titulo;
                                 }
                                 .subtitulo{
                                     font-family: 'Pacifico', cursive;
-                                    font-size: 2rem;
+                                    font-size: 1.5rem;
+                                    color: $color-subtitulo;
                                 }
                             }
                         }
@@ -53,7 +78,7 @@ body{
                             .box{
                                 gap: 1rem;
                                 .enlace{
-                                    color: rgb(255, 255, 255);
+                                    color: $color-enlace;
                                     font-size: 18px;
                                     padding: 7px 13px;
                                     border-radius: 3px;
@@ -61,9 +86,9 @@ body{
                                     font-family: 'Istok Web', sans-serif;   
                                 }
                                 .enlace.active, .enlace:hover{
-                                    background: #fffad2;
+                                    background: $marco-enlace;
                                     transition: .5s;
-                                    color: $color-enlace;
+                                    color: $color-enlace-on;
                                 }
                             }
                         }
@@ -82,27 +107,27 @@ body{
         flex-direction: column;
         background-blend-mode: soft-light;
         background-color: $color-media;
-        text-decoration-color: beige;
+        text-decoration-color: $text-decoration;
         .titular-media{
             font-family: 'Signika Negative', sans-serif;
             font-size: 2rem;
-            color: rgb(212, 210, 210);
+            color: $titular-media;
             text-align: center;
         }
         .parrafo-media{
             font-family: 'Signika Negative', sans-serif;
             font-size: 1.2rem;
-            color: rgb(212, 210, 210);
+            color: $parrafo-media;
             text-align: center;
         }  
     }
     .scroll-down {
         display: none;
-        height: 50px;
-        width: 30px;
-        border: 2px solid rgb(255, 255, 255);
+        height: 60px;
+        width: 50px;
+        border: 2px solid $scroll-down;
         position: absolute;
-        left: 49.3%;
+        left: 48.5%;
         bottom: 20px;
         border-radius: 50px;
         cursor: pointer;
@@ -113,10 +138,10 @@ body{
         position: absolute;
         top: 20%;
         left: 50%;
-        height: 10px;
-        width: 10px;
+        height: 16px;
+        width: 16px;
         transform: translate(-50%, -100%) rotate(45deg);
-        border: 2px solid rgb(255, 255, 255);
+        border: 2px solid $borde-scroll;
         border-top: transparent;
         border-left: transparent;
         animation: scroll-down 1s ease-in-out infinite;
@@ -124,7 +149,7 @@ body{
     .scroll-down::before {
         top: 30%;
         animation-delay: 0.3s;
-        /* animation: scroll-down 1s ease-in-out infinite; */
+        
     }
           
     @keyframes scroll-down {
@@ -151,35 +176,62 @@ body{
         .detalles{
             display: flex;
             flex-direction: column;
-            align-items: center;
-            margin: 0.5rem 2rem;
+            margin: 4.7rem 1rem 0 1rem;
             padding-bottom: 3rem;
+            .portada-uno{
+                width: 25rem;
+                height: 35rem;
+            }
+            .portada-dos{
+                width: 25rem;
+                height: 35rem;
+            }
+            .portada-tres{
+                width: 25rem;
+                height: 35rem;
+            }
             .ambientacion{
                 text-decoration: underline;
                 font-family: 'Signika Negative', sans-serif;
                 font-size: 2rem;
                 text-align: center;
+                color: $ambientacion;
             }
             .ambientacion-parrafo{
-                color: black;
+                color: $ambientacion-parrafo;
                 max-width: 379px;
                 font-family: 'Signika Negative', sans-serif;
                 font-size: 1.3rem;
-                text-align: center;
-                
+                text-align: center; 
             }
             .hoteleria{
                 text-decoration: underline;
                 font-family: 'Signika Negative', sans-serif;
                 font-size: 2rem;
                 text-align: center;
+                color: $hoteleria;
             }
             .hoteleria-parrafo{
-                color: black;
+                color: $hoteleria-parrafo;
                 max-width: 379px;
                 font-family: 'Signika Negative', sans-serif;
                 font-size: 1.3rem;
                 text-align: center;
+            }
+            .deco{
+                text-decoration: underline;
+                font-family: 'Signika Negative', sans-serif;
+                font-size: 2rem;
+                text-align: center;
+                color: $deco;
+            }
+            .deco-parrafo{
+                color: $deco-parrafo;
+                max-width: 379px;
+                font-family: 'Signika Negative', sans-serif;
+                font-size: 1.3rem;
+                text-align: center;
+                
             }
         }
         .video{
@@ -274,10 +326,127 @@ body{
             min-height: 288px;
         }
         p{
-            font-family: 'Signika Negative', sans-serif;
-            color: black;
             max-width: 379px;
         }
+        .titulo-proyecto{
+            @extend %titulo-proyecto;
+        }
+        .subtitulo-uno{
+            @extend %subtitulo-proyectos;
+        }
+        .parrafo-uno{
+            @extend %parrafo-proyectos;
+        }        
+        .subtitulo-dos{
+            @extend %subtitulo-proyectos;
+      
+        }
+        .parrafo-dos{
+            @extend %parrafo-proyectos;
+        }  
+        .subtitulo-tres{
+            @extend %subtitulo-proyectos;
+        }
+        .parrafo-tres{
+            @extend %parrafo-proyectos;
+        }  
+        .subtitulo-cuatro{
+            @extend %subtitulo-proyectos;    
+        }
+        .parrafo-cuatro{
+            @extend %parrafo-proyectos;
+        }  
+        .subtitulo-cinco{
+            @extend %subtitulo-proyectos;        
+        }
+        .parrafo-cinco{
+            @extend %parrafo-proyectos;
+        }  
+        .subtitulo-seis{
+            @extend %subtitulo-proyectos;      
+        }
+        .parrafo-seis{
+            @extend %parrafo-proyectos;   
+        }  
+      
+        .subtitulo-siete{
+            @extend %subtitulo-proyectos;        
+        }
+        .parrafo-siete{
+            @extend %parrafo-proyectos;        
+        }  
+      
+        .subtitulo-ocho{
+            @extend %subtitulo-proyectos;       
+        }
+        .parrafo-ocho{
+            @extend %parrafo-proyectos;      
+        }  
+        
+        .subtitulo-nueve{
+            @extend %subtitulo-proyectos;       
+        }
+        .parrafo-nueve{
+            @extend %parrafo-proyectos;       
+        }  
+       
+        .subtitulo-diez{
+            @extend %subtitulo-proyectos;      
+        }
+        .parrafo-diez{
+            @extend %parrafo-proyectos;      
+        }  
+       
+        .subtitulo-once{
+            @extend %subtitulo-proyectos;     
+        }
+        .parrafo-once{
+            @extend %parrafo-proyectos;       
+        }  
+        
+        .subtitulo-doce{
+            @extend %subtitulo-proyectos;      
+        }
+        .parrafo-doce{
+            @extend %parrafo-proyectos;    
+        }  
+        .subtitulo-trece{
+            @extend %subtitulo-proyectos;      
+        }
+        .parrafo-trece{
+            @extend %parrafo-proyectos;       
+        }  
+        .subtitulo-catorce{
+            @extend %subtitulo-proyectos;       
+        }
+        .parrafo-catorce{
+            @extend %parrafo-proyectos;      
+        }  
+        .subtitulo-quince{
+            @extend %subtitulo-proyectos;      
+        }
+        .parrafo-quince{
+            @extend %parrafo-proyectos;    
+        }  
+        .subtitulo-dieciseis{
+            @extend %subtitulo-proyectos;       
+        }
+        .parrafo-dieciseis{
+            @extend %parrafo-proyectos;     
+        }  
+        .subtitulo-diecisiete{
+            @extend %subtitulo-proyectos;      
+        }
+        .parrafo-diecisiete{
+            @extend %parrafo-proyectos;       
+        }  
+        
+        .subtitulo-dieciocho{
+            @extend %subtitulo-proyectos;      
+        }
+        .parrafo-dieciocho{
+            @extend %parrafo-proyectos;      
+        }  
     }
     .fotos{
         padding-top: 8rem;
@@ -289,22 +458,28 @@ body{
         .fotos-titulo{
             text-transform: uppercase;
             text-align: center;
-            color: black;
+            color: $fotos-titulo;
             max-width: 607px;
             font-family: 'Signika Negative', sans-serif;
+            font-size: 1.8rem;
         }
         
-        .foto-uno, .foto-dos, .foto-tres, .foto-cuatro, .foto-cinco, .foto-seis{
+        .foto-uno, .foto-dos, .foto-tres, .foto-cuatro, .foto-cinco, .foto-seis, .foto-siete, .foto-ocho, .foto-nueve, .foto-diez, .foto-once, .foto-doce{
             width: 24rem;
             height: 31rem;
-            margin: 2rem 0;
+            margin: 0rem 0rem 5rem 0rem;
         }
+        p{
+            font-size: 1.3rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
     }
     .team{
         .nosotros {
             @extend %flex;
             flex-direction: column;
-            padding-top: 12rem;
+            padding-top: 8rem;
             min-width: 400px;
             padding-bottom: 5rem;
             .nosotros-titulo{
@@ -319,37 +494,22 @@ body{
                     height: 400px;
                 }
                 .titulo-cami{
-                    font-family: 'Signika Negative', sans-serif;
-                    color: black;
-                    max-width: 380px;
+                    @extend %titulo-equipo;
                 }
                 .parrafo-cami{
-                    font-family: 'Signika Negative', sans-serif;
-                    color: black;
-                    max-width: 380px;
-                    padding-bottom: 7rem;
+                    @extend %parrafo-equipo;
                 }
                 .titulo-ale{
-                    font-family: 'Signika Negative', sans-serif;
-                    color: black;
-                    max-width: 380px;
+                    @extend %titulo-equipo;
                 }
                 .parrafo-ale{
-                    font-family: 'Signika Negative', sans-serif;
-                    color: black;
-                    max-width: 380px;
-                    padding-bottom: 7rem;
+                    @extend %parrafo-equipo;
                 }
                 .titulo-jaqui{
-                    font-family: 'Signika Negative', sans-serif;
-                    color: black;
-                    max-width: 380px;
+                    @extend %titulo-equipo;
                 }
                 .parrafo-jaqui{
-                    font-family: 'Signika Negative', sans-serif;
-                    color: black;
-                    max-width: 380px;
-                    padding-bottom: 7rem;
+                    @extend %parrafo-equipo;
                 }
             }
         }
@@ -361,6 +521,7 @@ body{
                 .imagen-contacto{
                     width: map-get($map: $standard, $key: width-standard);
                     min-width: 376px;
+                    height: 60vh;
                 }
                 .planilla{
                     min-width: 376px;
@@ -368,31 +529,97 @@ body{
                 .parrafo-contacto{
                     font-family: 'Signika Negative', sans-serif;
                     min-width: 376px;
-                    color: black;
+                    color: $parrafo-contacto;
                     text-align: start;
                 }                
             }
         }
     }
     .pie{
-        background-color: $color-pie;
-        padding: 2rem 0;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "pie-nosotros informacion pie-titulo"
+                             "pie-descripcion informacion redes"
+                             "copyright copyright copyright"
+                             ;
+        align-items: center;
         min-width: 400px;
+        padding-top: 3rem;
+        background-color: $color-pie;
+        .pie-nosotros{
+             grid-area: pie-nosotros;
+             text-align: center;
+             min-width: 225px;
+             max-width: 255px;
+             margin: 0 0.4rem;
+             justify-self: center;
+             font-size: 1.4rem;
+        }
+        .pie-descripcion{
+             grid-area: pie-descripcion;
+             text-align: center;
+             min-width: 225px;
+             width: 225px;
+             display: flex;
+             justify-content: center;
+             justify-self: center;
+             margin: 0 0.4rem 4rem 0.4rem;
+        }
+        .informacion{
+             grid-area: informacion;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             border-left-style: solid;
+             border-right-style: solid;
+             nav{
+                .informacion-lista{
+                     display: flex;
+                     flex-direction: column;
+                     padding-left: 0;
+                     row-gap: 2rem;
+                     li{
+                         list-style: none;
+                          a{
+                             text-decoration: none;
+                             color: $informacion-footer;
+                           }
+                       }
+                    }
+                }
+        }
+        .pie-titulo{
+             grid-area: pie-titulo;
+             text-align: center;
+             font-size: 1.4rem;
+        }
         .redes{
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            min-width: 400px;
+             grid-area: redes;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             row-gap: 1rem;
         }
         .copyright{
-            display: flex;
-            margin-top: 2rem;
-            justify-content: center;
-            padding: 0 1rem;
-            text-align: center;
-            color: black;
+             grid-area: copyright;
+             text-align: center;
+             font-size: 1rem;
+             padding-top: 3rem;
         }
-    }
+        .oficina{
+             display: none;
+        } 
+        .mapa{
+             display: none;
+        }        
+        .direccion{
+             display: none;
+        }
+}
+
 @media screen and (min-width:400px){
     .scroll-down {
         display: inline;
@@ -406,33 +633,51 @@ body{
         .detalles{
             display: grid;
             grid-template-columns: auto auto;
-            grid-template-rows: auto auto auto;
-            grid-template-areas: "primer-living segundo-living"
-                                 "ambientacion hoteleria"
-                                 "ambientacion-parrafo hoteleria-parrafo"
+            grid-template-rows: auto auto auto auto auto auto;
+            grid-template-areas: "portada-uno ambientacion"
+                                 "portada-uno ambientacion-parrafo"
+                                 "portada-dos hoteleria"
+                                 "portada-dos hoteleria-parrafo"
+                                 "portada-tres deco"
+                                 "portada-tres deco-parrafo"
                                  ;
-            align-items: center;
+            gap: 2rem;
             justify-content: center;
-            column-gap: 1rem;
-            .primer.living{
-                grid-area: primer-living;
+            .portada-uno{
+                grid-area: portada-uno;
             }
-            .segundo.living{
-                grid-area: segundo-living;
+            .portada-dos{
+                grid-area: portada-dos;
+            }
+            .portada-tres{
+                grid-area: portada-tres;
             }
             .ambientacion{
                 grid-area: ambientacion;
                 text-align: center;
+                padding-top: 12rem;
             }
             .ambientacion-parrafo{
                 grid-area: ambientacion-parrafo;
+                padding-bottom: 7rem;
             }
             .hoteleria{
                 grid-area: hoteleria;
                 text-align: center;
+                padding-top: 12rem;
             }
             .hoteleria-parrafo{
                 grid-area: hoteleria-parrafo;
+                padding-bottom: 7rem;
+            }
+            .deco{
+                grid-area: deco;
+                text-align: center;
+                padding-top: 12rem;
+            }
+            .deco-parrafo{
+                grid-area: deco-parrafo;
+                padding-bottom: 7rem;
             }
         }
         .referencia{
@@ -482,7 +727,6 @@ body{
                              "parrafo-diecisiete parrafo-dieciocho"
                              ;
         justify-content: center;
-        align-items: center;
         justify-items: center;
         gap: 2rem;
         padding-bottom: 5rem;
@@ -671,11 +915,20 @@ body{
     .fotos{
         display: grid;
         grid-template-columns: auto auto;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto;
         grid-template-areas: "fotos-titulo fotos-titulo"
+                             "foto-titulo-uno foto-titulo-dos"
                              "foto-uno foto-dos"
+                             "foto-titulo-tres foto-titulo-cuatro"
                              "foto-tres foto-cuatro"
+                             "foto-titulo-cinco foto-titulo-seis"
                              "foto-cinco foto-seis"
+                             "foto-titulo-siete foto-titulo-ocho"
+                             "foto-siete foto-ocho"
+                             "foto-titulo-nueve foto-titulo-diez"
+                             "foto-nueve foto-diez"
+                             "foto-titulo-once foto-titulo-doce"
+                             "foto-once foto-doce"
                              ;
         align-items: center;
         justify-content: center;
@@ -685,30 +938,126 @@ body{
         .fotos-titulo{
             grid-area: fotos-titulo;
         }
+        .foto-titulo-uno{
+            grid-area: foto-titulo-uno;
+        }
         .foto-uno{
             grid-area: foto-uno;
+        }
+        .foto-titulo-dos{
+            grid-area: foto-titulo-dos;
         }
         .foto-dos{
             grid-area: foto-dos;
         }
+        .foto-titulo-tres{
+            grid-area: foto-titulo-tres;
+        }
         .foto-tres{
             grid-area: foto-tres;
+        }
+        .foto-titulo-cuatro{
+            grid-area: foto-titulo-cuatro;
         }
         .foto-cuatro{
             grid-area: foto-cuatro;
         }
+        .foto-titulo-cinco{
+            grid-area: foto-titulo-cinco;
+        }
         .foto-cinco{
             grid-area: foto-cinco;
+        }
+        .foto-titulo-seis{
+            grid-area: foto-titulo-seis;
         }
         .foto-seis{
             grid-area: foto-seis;
         }
-    }
+        .foto-titulo-siete{
+            grid-area: foto-titulo-siete;
+        }
+        .foto-siete{
+            grid-area: foto-siete;
+        }
+        .foto-titulo-ocho{
+            grid-area: foto-titulo-ocho;
+        }
+        .foto-ocho{
+            grid-area: foto-ocho;
+        }
+        .foto-titulo-nueve{
+            grid-area: foto-titulo-nueve;
+        }
+        .foto-nueve{
+            grid-area: foto-nueve;
+        }
+        .foto-titulo-diez{
+            grid-area: foto-titulo-diez;
+        }
+        .foto-diez{
+            grid-area: foto-diez;
+        }
+        .foto-titulo-once{
+            grid-area: foto-titulo-once;
+        }
+        .foto-once{
+            grid-area: foto-once;
+        }
+        .foto-titulo-doce{
+            grid-area: foto-titulo-doce;
+        }
+        .foto-doce{
+            grid-area: foto-doce;
+        }
+    } 
 }
 @media screen and (min-width:1241px){
+    header{
+        .container-fluid{
+            .row{
+                .navegacion{
+                    .menu{
+                        .logotipo{
+                            .caja{ 
+                                flex-direction: row;
+                                column-gap: 0.7rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     section{
         .detalles{
-            column-gap: 20rem;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto auto auto auto auto;
+            grid-template-areas: "portada-uno portada-dos portada-tres"
+                                 "ambientacion hoteleria deco"
+                                 "ambientacion-parrafo hoteleria-parrafo deco-parrafo"
+                                 ;
+            column-gap: 1rem;
+            .ambientacion{
+                padding-top: 0rem;
+            }
+            .ambientacion-parrafo{
+                padding-bottom: 0rem;
+            }
+            .hoteleria{
+                padding-top: 0rem;
+            }
+            .hoteleria-parrafo{
+                padding-bottom: 2rem;
+            }
+            .deco{
+                padding-top: 0rem;
+            }
+            .deco-parrafo{
+                padding-bottom: 0rem;
+            }
+            
         }
         .referencia{
             .empresas{
@@ -754,8 +1103,14 @@ body{
         grid-template-columns: auto auto;
         grid-template-rows: auto auto auto auto;
         grid-template-areas: "fotos-titulo fotos-titulo fotos-titulo"
+                             "foto-titulo-uno foto-titulo-dos foto-titulo-tres"
                              "foto-uno foto-dos foto-tres"
+                             "foto-titulo-cuatro foto-titulo-cinco foto-titulo-seis"
                              "foto-cuatro foto-cinco foto-seis"
+                             "foto-titulo-siete foto-titulo-ocho foto-titulo-nueve"
+                             "foto-siete foto-ocho foto-nueve"
+                             "foto-titulo-diez foto-titulo-once foto-titulo-doce"
+                             "foto-diez foto-once foto-doce"
                              ;
         align-items: center;
         justify-content: center;
@@ -809,5 +1164,66 @@ body{
             }
         }
     }
+    .pie{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "pie-nosotros informacion pie-titulo oficina"
+                             "pie-descripcion informacion redes mapa"
+                             "pie-decripcion informacion redes direccion"
+                             "copyright copyright copyright copyright";
+        .oficina{
+            grid-area: oficina;
+            display: block;
+            font-size: 1.5rem;
+        }
+        .mapa{
+            grid-area: mapa;
+            display: block;
+        }
+        .direccion{
+            grid-area: direccion;
+            display: block;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+    }
+    
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
